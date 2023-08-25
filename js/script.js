@@ -51,15 +51,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
   }
  
-/*
-function orden(a, b){
-  if(a.name < b.name) { return -1; }  // Devuelva -1 si el primer string es menor que el segundo.
-  if(a.name > b.name) { return 1; } // Devuelva 1 si el primer string es mayor que el segundo
-  return 0; // Devuelva 0 si los strings son iguales
-}*/
+
 
   showList(strangeArray.filter(filtrarString).sort(function (a, b){
-    return a.localeCompare(b);
+    return a.localeCompare(b); //Para ordenar strings con characters no ASCII,
   }));
 
 });
