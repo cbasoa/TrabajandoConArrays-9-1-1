@@ -43,17 +43,19 @@ function showList(array) {
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  
+  /*Se evita tanto código y funciona igual, de la otra manera, sin hacer if
   function filtrarString(obj){
     if(typeof obj === "string" ){
       return true;
     }else{
       return false;
     }
-  }
+  }*/
  
 
 
-  showList(strangeArray.filter(filtrarString).sort(function (a, b){
+  showList(strangeArray.filter(elem => typeof elem === "string").sort(function (a, b){
     return a.localeCompare(b); //Para ordenar strings con characters no ASCII,
   }));
 
